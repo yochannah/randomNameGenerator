@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Generate random list of reviewers</title>
+<style>
+body {
+  font-family:sans-serif;
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+}
+form {
+  display:flex;
+  flex-direction:column;
+  max-width:50em;
+}
+
+label {
+  padding:1em;
+}
+
+button {
+
+  background-color:#03A9F4;
+  color:#fff;
+  border-radius:2px;
+  border:0;
+  height:3em;
+  font-size:1.5em;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+  box-shadow:1px 1px 1px rgba(0,0,0,0.1);
+  border-right: solid 3px #039BE5;
+  border-bottom:solid 2px #0288D1
+}
+
+button:hover {
+
+  background-color:#039BE5;
+  color:#fff;
+  border-radius:2px;
+  border:0;
+  height:3em;
+  font-size:1.5em;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+  box-shadow:1px 1px 1px rgba(0,0,0,0.1);
+  border-right: solid 3px #0288D1;
+  border-bottom:solid 2px #0277BD;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+  <h1>Random Reviewer Generator</h1>
+  <form id="generate">
+    <label>
+      Reviewer names (comma separated)
+        <input id="names" type="text" placeholder="Bob, Alice, Eve" required="true"></input>
+    </label>
+    <label>
+      Number of reviewers per proposal
+          <input id="numReviewers" type="number" value="2"></input>
+    </label>
+    <label>
+      Number of proposals
+          <input id="numProposals" type="number" value="70"></input>
+    </label>
+    <button>Generate list</button>
+  </form>
+
+  <pre id="results"></pre>
+
+  <script src="randomreviewers.js"></script>
+
+</body>
+
+
+</html>
